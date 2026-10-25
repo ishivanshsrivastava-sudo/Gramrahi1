@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gramrahi | Connecting Every Citizen to Better Healthcare</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+    <div class="toast" id="toast"></div>
+
+    <button class="floating-emergency" onclick="showPage('ambulance')">
+        🚑 Emergency Help
+    </button>
+
+    <div class="page active" id="home">
+
+        <nav>
+            <div class="nav-container">
+
+                <div class="brand" onclick="showPage('home')">
+                    <div class="brand-logo">🏥</div>
+                    <div>
+                        <h2>Gramrahi</h2>
+                        <span>Healthcare for Every Citizen</span>
+                    </div>
+                </div>
+
+                <div class="nav-links">
+                    <button onclick="showPage('home')">Home</button>
+                    <button onclick="showPage('guide')">AI Guide</button>
+                    <button onclick="showPage('locator')">Find Clinics</button>
+                    <button onclick="showPage('schemes')">Schemes</button>
+
+                    <button class="nav-login" onclick="showPage('login')">Login</button>
+                </div>
+
+                <div class="language-switch">
+                    <button id="languageBtn" type="button" onclick="toggleLanguage()">
+                        🌐 हिंदी में देखें
+                    </button>
+                    <div id="google_translate_element"></div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="hero">
+            <div class="hero-container">
+
+                <div>
+                    <div class="badge">🇮🇳 Accessible Healthcare for Every Citizen</div>
+
+                    <h1>
+                        Healthcare That
+                        <span>Reaches Everyone.</span>
+                    </h1>
+
+                    <p>
+                        Gramrahi connects citizens with essential healthcare services,
+                        nearby medical facilities, government benefits, emergency
+                        support and simple healthcare guidance.
+                    </p>
+
+                    <div class="journey">
+                        <div class="journey-step">1. Login</div>
+                        <div class="arrow">→</div>
+                        <div class="journey-step">2. AI Guide</div>
+                        <div class="arrow">→</div>
+                        <div class="journey-step">3. Select Service</div>
+                        <div class="arrow">→</div>
+                        <div class="journey-step">4. Get Help</div>
+                    </div>
+
+                    <div class="hero-buttons">
+                        <button class="primary-btn" onclick="showPage('login')">Get Started →</button>
+                        <button class="secondary-btn" onclick="showPage('guide')">🤖 Talk to AI Guide</button>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="health-card">
+                        <div class="doctor-illustration">👩‍⚕️</div>
+                    </div>
+                    <div class="mini-info one">🧠 AI Healthcare Guide</div>
+                    <div class="mini-info two">📍 Find Care Nearby</div>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Healthcare Services Made Simple</h2>
+                    <p>
+                        Everything you need to access essential healthcare services
+                        in one simple and trusted platform.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+
+                    <div class="service-card">
+                        <div class="service-icon">🤖</div>
+                        <h3>AI Healthcare Guide</h3>
+                        <p>Get simple guidance and navigate healthcare services.</p>
+                        <button class="card-link" onclick="showPage('guide')">Ask AI Guide →</button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">📍</div>
+                        <h3>Find Nearby Clinics</h3>
+                        <p>Discover nearby hospitals and healthcare centers.</p>
+                        <button class="card-link" onclick="showPage('locator')">Find Clinics →</button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">📋</div>
+                        <h3>Scheme Eligibility</h3>
+                        <p>Check healthcare schemes based on your eligibility.</p>
+                        <button class="card-link" onclick="showPage('schemes')">Check Eligibility →</button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">👤</div>
+                        <h3>Patient Profile</h3>
+                        <p>Manage your health information securely.</p>
+                        <button class="card-link" onclick="showPage('profile')">View Profile →</button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🚑</div>
+                        <h3>Emergency Ambulance</h3>
+                        <p>Quickly request emergency medical assistance.</p>
+                        <button class="card-link" onclick="showPage('ambulance')">Request Ambulance →</button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">☎️</div>
+                        <h3>Healthcare Contacts</h3>
+                        <p>Access important emergency contact numbers.</p>
+                        <button class="card-link" onclick="showPage('contacts')">View Contacts →</button>
+                    </div>
+
+                </div>
+
+                <div class="impact-section" id="impact">
+                    <span class="new-pill">TECH FOR SOCIAL GOOD</span>
+                    <h2>The Problem We Are Solving</h2>
+                    <p class="impact-lead">In many villages and underserved areas of India, people reach a hospital with no health
+                        history, no record of past treatment, and no easy way to prove which scheme they are covered by. In an
+                        emergency, doctors start from zero and families lose precious time. Paper records and vaccination
+                        cards get lost, damaged or left at home.</p>
+
+                    <div class="impact-grid">
+                        <div class="impact-card"><h4>👥 Who it helps</h4>
+                            <p>Rural and underserved citizens, parents of young children, senior citizens, and patients who
+                                cannot speak for themselves in an emergency.</p></div>
+                        <div class="impact-card"><h4>💡 How Gramrahi helps</h4>
+                            <p>One Patient ID, a photo to identify the patient, and photos of prescriptions and vaccination
+                                cards stored safely, so any hospital can see what it needs to start treatment.</p></div>
+                        <div class="impact-card"><h4>🎯 UN SDG alignment</h4>
+                            <p>SDG 3 (Good Health and Well-being) and SDG 10 (Reduced Inequalities): healthcare access that
+                                does not depend on paperwork, language or location.</p></div>
+                    </div>
+
+                    <div class="cloudinary-note">
+                        <strong>☁️ Powered by Cloudinary.</strong> Patient photos, prescriptions and vaccination-card photos
+                        are uploaded with the Cloudinary Upload Widget (camera or gallery). They are then delivered
+                        auto-cropped (face-aware), auto-compressed and in the best format for each phone, so records
+                        load fast even on slow rural networks.
+                    </div>
+                </div>
+
+                <div class="child-launch">
+                    <div>
+                        <h3>👶 Child Healthcare</h3>
+                        <p style="margin-top:6px;color:var(--muted)">Manage child profiles, vaccination records, growth
+                            checks, symptom guidance and child-related schemes.</p>
+                    </div>
+                    <button class="primary-btn" onclick="showPage('children')">Open Child Healthcare →</button>
+                </div>
+
+                <div class="handoff-showcase">
+                    <span class="new-pill">NEW FEATURE</span>
+                    <h3>🏥 Smart Emergency Health Handoff</h3>
+                    <p>In an emergency, every minute counts. When you press the emergency button, Gramrahi automatically
+                        sends your key health details to the hospital you are being taken to, so doctors know your
+                        history before you reach the door.</p>
+
+                    <div class="handoff-flow">
+                        <div class="handoff-step"><b>1</b>
+                            <h4>Save once</h4>
+                            <p>Add your health profile and Ayushman card number during login.</p>
+                        </div>
+                        <div class="handoff-step"><b>2</b>
+                            <h4>Press Emergency</h4>
+                            <p>Request an ambulance. The nearest hospital is selected automatically.</p>
+                        </div>
+                        <div class="handoff-step"><b>3</b>
+                            <h4>Auto-sent</h4>
+                            <p>Your details and location reach the hospital instantly.</p>
+                        </div>
+                        <div class="handoff-step"><b>4</b>
+                            <h4>Ready on arrival</h4>
+                            <p>The team knows your history, allergies and insurance cover.</p>
+                        </div>
+                    </div>
+
+                    <div class="handoff-chips">
+                        <span>🎂 Age</span><span>🩺 Previous health issues</span><span>💊 Current
+                            treatment</span><span>⚠️ Allergies</span><span>🩸 Blood group</span><span>🪪 Ayushman
+                            card</span><span>📞 Emergency contact</span><span>📍 Live location</span>
+                    </div>
+
+                    <div class="patient-id-box" style="max-width:760px">
+                        <span>🪪 Unique Gramrahi Patient ID</span>
+                        <strong style="font-size:20px">GRM-XXXX-XXXX</strong>
+                        <small style="margin-top:0">Every patient gets a unique ID when they complete their profile. At
+                            any hospital, giving this ID is enough: the hospital sees your health record instantly,
+                            without paperwork.</small>
+                    </div>
+
+                    <div class="hero-buttons" style="margin-top:0">
+                        <button class="primary-btn" onclick="showPage('ambulance')">See it in action →</button>
+                        <button class="secondary-btn" onclick="showPage('login')">Get my Patient ID</button>
+
+                    </div>
+                    <p class="child-note">Details are shared only with your consent, and only with the hospital you are
+                        sent to.</p>
+                </div>
+
+                <div style="margin-top:55px;" class="emergency-banner">
+                    <div>
+                        <h2>🚨 Need Emergency Medical Help?</h2>
+                        <p>Request emergency assistance quickly. Your saved health details reach the hospital
+                            automatically.</p>
+                    </div>
+                    <button class="emergency-btn" onclick="showPage('ambulance')">🚑 Request Ambulance</button>
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-grid">
+
+                <div>
+                    <h2>🏥 Gramrahi</h2>
+                    <p>Bridging healthcare to every corner of India.</p>
+                </div>
+
+                <div>
+                    <h4>Services</h4>
+                    <button onclick="showPage('guide')">AI Healthcare Guide</button>
+                    <button onclick="showPage('locator')">Find Clinics</button>
+                    <button onclick="showPage('schemes')">Government Schemes</button>
+                </div>
+
+                <div>
+                    <h4>Quick Access</h4>
+                    <button onclick="showPage('profile')">Patient Profile</button>
+                    <button onclick="showPage('contacts')">Healthcare Contacts</button>
+                    <button onclick="showPage('ambulance')">Emergency Ambulance</button>
+                </div>
+
+            </div>
+
+            <div class="copyright">
+                © 2026 Gramrahi • Connecting Every Citizen to Better Healthcare<br><small>Media delivery powered by ☁️ Cloudinary</small>
+            </div>
+        </footer>
+
+    </div>
+
+    <div class="page" id="login">
+
+        <nav>
+            <div class="nav-container">
+                <div class="brand" onclick="showPage('home')">
+                    <div class="brand-logo">🏥</div>
+                    <div>
+                        <h2>Gramrahi</h2>
+                        <span>Secure Healthcare Access</span>
+                    </div>
+                </div>
+                <button class="secondary-btn" onclick="showPage('home')">← Back to Home</button>
+            </div>
+        </nav>
+
+        <div class="page-header">
+            <h1>Login to Gramrahi</h1>
+            <p>Login securely and complete your healthcare profile.</p>
+        </div>
+
+        <div class="login-box">
+
+            <div class="step-progress">
+                <div class="step-dot active" id="dot1"></div>
+                <div class="step-dot" id="dot2"></div>
+                <div class="step-dot" id="dot3"></div>
+            </div>
+
+            <div class="form-step active-step" id="step1">
+                <h2>Welcome to Gramrahi 👋</h2>
+                <p>Enter your mobile number to continue.</p>
+
+                <div class="form-group">
+                    <label>Mobile Number</label>
+                    <input id="mobileNumber" type="tel" placeholder="Enter 10 digit mobile number" maxlength="10">
+                </div>
+
+                <button class="full-btn" onclick="sendOTP()">Send OTP →</button>
+            </div>
+
+            <div class="form-step" id="step2">
+                <button class="back-btn" onclick="showStep(1)">← Back</button>
+
+                <h2>Verify OTP 🔐</h2>
+                <p>Enter the OTP sent to your mobile number.</p>
+
+                <div class="form-group">
+                    <label>Enter OTP</label>
+                    <input id="otpInput" type="text" maxlength="6" placeholder="For testing use 123456">
+                </div>
+
+                <button class="full-btn" onclick="verifyOTP()">Verify OTP →</button>
+            </div>
+
+            <div class="form-step" id="step3">
+                <button class="back-btn" onclick="showStep(2)">← Back</button>
+
+                <h2>Complete Your Health Profile 🏥</h2>
+                <p>Basic information helps us provide better healthcare guidance.</p>
+
+                <div class="form-group">
+                    <label>Your Photo (helps hospitals identify you in an emergency)</label>
+                    <div class="photo-upload">
+                        <img id="photoPreviewStep3" class="photo-thumb" alt="" style="display:none">
+                        <button type="button" class="secondary-btn" onclick="uploadProfilePhoto()">📷 Take / Upload Photo</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Full Name *</label>
+                    <input id="patientName" type="text" placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label>Age *</label>
+                    <input id="patientAge" type="text" placeholder="Enter your age">
+                </div>
+
+                <div class="form-group">
+                    <label>Gender *</label>
+                    <select id="patientGender">
+                        <option value="">Select Gender</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Blood Group *</label>
+                    <select id="bloodGroup">
+                        <option value="">Select Blood Group</option>
+                        <option>A+</option>
+                        <option>A-</option>
+                        <option>B+</option>
+                        <option>B-</option>
+                        <option>AB+</option>
+                        <option>AB-</option>
+                        <option>O+</option>
+                        <option>O-</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Existing Medical Condition</label>
+                    <select id="medicalCondition">
+                        <option value="">Select Option</option>
+                        <option>No Known Condition</option>
+                        <option>Diabetes</option>
+                        <option>Blood Pressure</option>
+                        <option>Heart Condition</option>
+                        <option>Asthma</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Allergies</label>
+                    <input id="allergies" type="text" placeholder="Example: Dust, Food, Medicine">
+                </div>
+
+                <div class="form-group">
+                    <label>Emergency Contact Number</label>
+                    <input id="emergencyContact" type="tel" maxlength="10" placeholder="Enter emergency contact number">
+                </div>
+
+                <div class="form-group">
+                    <label>Previous Health Issues / Surgeries</label>
+                    <input id="pastIssues" type="text" maxlength="250"
+                        placeholder="Example: Typhoid (2023), appendix surgery">
+                </div>
+
+                <div class="form-group">
+                    <label>Current Treatment / Regular Medicines</label>
+                    <input id="currentTreatment" type="text" maxlength="250"
+                        placeholder="Example: Metformin daily, inhaler when needed">
+                </div>
+
+                <div class="form-group">
+                    <label>Ayushman Bharat (PM-JAY) Card / ABHA Number</label>
+                    <input id="ayushmanId" type="text" maxlength="20" placeholder="Enter card number (optional)">
+                </div>
+
+                <div class="consent-box">
+                    <label>
+                        <input type="checkbox" id="shareConsent">
+                        <span><strong>Emergency data sharing:</strong> I agree that Gramrahi may send the details above
+                            to the hospital I am sent to when I press the emergency button, so treatment can start
+                            without delay. I can change this at any time.</span>
+                    </label>
+                </div>
+
+                <div class="form-navigation">
+                    <button class="previous-btn" onclick="showStep(2)">← Back</button>
+                    <button class="next-btn" onclick="completeProfile()">Complete Profile →</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="page" id="guide">
+
+        <nav>
+            <div class="nav-container">
+                <div class="brand" onclick="showPage('home')">
+                    <div class="brand-logo">🏥</div>
+                    <div>
+                        <h2>Gramrahi</h2>
+                        <span>AI Healthcare Guide</span>
+                    </div>
+                </div>
+                <button class="secondary-btn" onclick="goBack()">← Back</button>
+            </div>
+        </nav>
+
+        <div class="page-header">
+            <h1>🤖 AI Healthcare Guide</h1>
+            <p>Your friendly assistant for navigating healthcare services.</p>
+        </div>
+
+        <div class="content-area">
+            <div class="chat-layout">
+
+                <div class="guide-sidebar">
+                    <h3>How can I help?</h3>
+                    <button class="quick-action" onclick="quickQuestion('I want to find a nearby clinic')">📍 Find
+                        Nearby Clinic</button>
+                    <button class="quick-action" onclick="quickQuestion('Check my scheme eligibility')">📋 Government
+                        Schemes</button>
+                    <button class="quick-action" onclick="quickQuestion('I need emergency ambulance help')">🚑 Emergency
+                        Help</button>
+                    <button class="quick-action" onclick="quickQuestion('Help me manage my profile')">👤 Patient
+                        Profile</button>
+                </div>
+
+                <div class="chat-window">
+
+                    <div class="chat-top">
+                        <div class="ai-avatar">🤖</div>
+                        <div>
+                            <strong>Gramrahi AI Guide</strong>
+                            <div style="color:#17b978;font-size:13px;">● Online & Ready to Help</div>
+                        </div>
+                    </div>
+
+                    <div class="messages" id="messages">
+                        <div class="message bot-message">
+                            👋 Namaste!
+                            <br><br>
+                            I am your Gramrahi Healthcare Guide.
+                            <br><br>
+                            I can help you find clinics, healthcare schemes,
+                            emergency assistance and other services.
+                            <br><br>
+                            How can I help you today?
+                        </div>
+                    </div>
+
+                    <div class="chat-input">
+                        <input id="chatInput" placeholder="Type your question..." onkeypress="handleEnter(event)">
+                        <button class="send-btn" onclick="sendMessage()">Send</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="page" id="profile">
+
+        <nav>
+            <div class="nav-container">
+                <div class="brand" onclick="showPage('home')">
+                    <div class="brand-logo">🏥</div>
+                    <div>
+                        <h2>Gramrahi</h2>
+                        <span>Patient Profile</span>
+                    </div>
+                </div>
+                <button class="secondary-btn" onclick="goBack()">← Back</button>
+            </div>
+        </nav>
+
+        <div class="page-header">
+            <h1>Patient Profile</h1>
+            <p>Manage your healthcare information.</p>
+        </div>
+
+        <div class="content-area">
+
+            <div class="profile-grid">
+
+                <div class="profile-card">
+                    <div class="profile-avatar" id="profileAvatar">👤</div>
+                    <button class="secondary-btn" style="margin-top:12px" onclick="uploadProfilePhoto()">📷 Change Photo</button>
+                    <h2 id="profileName">Citizen</h2>
+                    <p id="profilePhone">📱 Healthcare Profile</p>
+
+                    <div class="patient-id-box">
+                        <span>Your Gramrahi Patient ID</span>
+                        <strong id="profilePatientId">Complete your profile to get an ID</strong>
+                        <button class="secondary-btn" onclick="copyPatientId()">📋 Copy ID</button>
+                        <small>Show or tell this ID at any hospital and they can see your health details instantly, with
+                            no files to carry.</small>
+                    </div>
+
+                    <button class="primary-btn" style="margin-top:20px;" onclick="showPage('login'); showStep(3)">Edit
+                        Profile</button>
+                </div>
+
+                <div class="info-card">
+                    <h2>Your Healthcare Information</h2>
+
+                    <div class="health-info">
+
+                        <div class="health-item">
+                            <span>Age</span>
+                            <strong id="profileAge">Not Added</strong>
+                        </div>
+
+                        <div class="health-item">
+                            <span>Blood Group</span>
+                            <strong id="profileBlood">Not Added</strong>
+                        </div>
+
+                        <div class="health-item">
+                            <span>Gender</span>
+                            <strong id="profileGender">Not Added</strong>
+                        </div>
+
+                        <div class="health-item">
+                            <span>Medical Condition</span>
+                            <strong id="profileCondition">Not Added</strong>
+                        </div>
+
+                        <div class="health-item">
+                            <span>Allergies</span>
+                            <strong id="profileAllergies">Not Added</strong>
+                        </div>
+
+                        <div class="health-item">
+                            <span>Emergency Contact</span>
+                            <strong id="profileEmergency">Not Added</strong>
+                        </div>
+
+                        <div class="health-item">
+                            <span>Ayushman Card / ABHA</span>
+                            <strong id="profileAyushman">Not Added</strong>
+                        </div>
+
+                        <div class="health-item">
+                            <span>Previous Health Issues</span>
+                            <strong id="profilePast">Not Added</strong>
+                        </div>
+
+                        <div class="health-item">
+                            <span>Current Treatment</span>
+                            <strong id="profileTreatment">Not Added</strong>
+                        </div>
+
+                        <div class="health-item">
+                            <span>Emergency Data Sharing</span>
+                            <strong id="profileShare">Off</strong>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="info-card" style="margin-top:28px">
+                <h2>📄 Medical Documents</h2>
+                <p class="child-note">Take a photo of prescriptions, lab reports or discharge papers. They are stored in the
+                    cloud so you never have to carry paper, and are shown to a hospital only through your Patient ID.</p>
+                <button class="primary-btn" onclick="uploadMedicalDoc()">📤 Upload Prescription / Report</button>
+                <div id="docGallery" class="doc-gallery"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="page" id="schemes">
+
+        <nav>
+            <div class="nav-container">
+                <div class="brand" onclick="showPage('home')">
+                    <div class="brand-logo">🏥</div>
+                    <div>
+                        <h2>Gramrahi</h2>
+                        <span>Healthcare Scheme Eligibility</span>
+                    </div>
+                </div>
+                <button class="secondary-btn" onclick="goBack()">← Back</button>
+            </div>
+        </nav>
+
+        <div class="page-header">
+            <h1>Government Healthcare Schemes</h1>
+            <p>Check healthcare support based on your basic information.</p>
+        </div>
+
+        <div class="content-area">
+
+            <div class="scheme-form">
+
+                <h2 style="margin-bottom:25px;">Check Your Eligibility</h2>
+
+                <div class="scheme-grid">
+
+                    <div class="form-group">
+                        <label>Your Age</label>
+                        <input id="schemeAge" type="number" placeholder="Enter your age">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Medical Condition</label>
+                        <select id="schemeCondition">
+                            <option value="">Select condition</option>
+                            <option>General Healthcare</option>
+                            <option>Pregnancy</option>
+                            <option>Chronic Illness</option>
+                            <option>Senior Citizen Care</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Annual Income Category</label>
+                        <select>
+                            <option>Below ₹1 Lakh</option>
+                            <option>₹1–3 Lakh</option>
+                            <option>₹3–5 Lakh</option>
+                            <option>Above ₹5 Lakh</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Location Type</label>
+                        <select>
+                            <option>Rural Area</option>
+                            <option>Urban Area</option>
+                            <option>Underserved Area</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <button class="primary-btn" onclick="checkSchemes()">Check Available Schemes</button>
+
+            </div>
+
+            <div class="scheme-results" id="schemeResults"></div>
+
+        </div>
+
+    </div>
+
+    <div class="page" id="children">
+        <nav>
+            <div class="nav-container">
+                <div class="brand" onclick="showPage('home')">
+                    <div class="brand-logo">🏥</div>
+                    <div>
+                        <h2>Gramrahi</h2><span>Child Healthcare</span>
+                    </div>
+                </div>
+                <button class="secondary-btn" onclick="goBack()">← Back</button>
+            </div>
+        </nav>
+        <div class="page-header">
+            <h1>👶 Child Healthcare Centre</h1>
+            <p>One place for your children's basic health records and care reminders.</p>
+        </div>
+        <div class="content-area">
+            <div class="child-panel">
+                <h2>1. Parent and child profiles</h2>
+                <p class="child-note">Add each child under this browser's local demo profile. Do not use this prototype
+                    to store sensitive medical records on a shared device.</p>
+                <form id="childForm" onsubmit="saveChild(event)">
+                    <div class="child-grid">
+                        <div class="form-group"><label for="childName">Child's name *</label><input id="childName"
+                                required maxlength="70" placeholder="Enter child's name"></div>
+                        <div class="form-group"><label for="childAgeMonths">Age (months) *</label><input
+                                id="childAgeMonths" required type="number" min="0" max="204" placeholder="0–204 months">
+                        </div>
+                        <div class="form-group"><label for="childSex">Sex (for growth-chart assessment) *</label><select
+                                id="childSex" required>
+                                <option value="">Select</option>
+                                <option value="female">Female</option>
+                                <option value="male">Male</option>
+                            </select></div>
+                        <div class="form-group"><label for="childWeight">Weight (kg)</label><input id="childWeight"
+                                type="number" min="0" max="250" step="0.1" placeholder="e.g. 12.5"></div>
+                        <div class="form-group"><label for="childHeight">Height/length (cm)</label><input
+                                id="childHeight" type="number" min="0" max="250" step="0.1" placeholder="e.g. 88"></div>
+                        <div class="form-group"><label for="childAllergies">Allergies</label><input id="childAllergies"
+                                maxlength="250" placeholder="Known allergies or None known"></div>
+                        <div class="form-group"><label for="childConditions">Conditions / medicines</label><input
+                                id="childConditions" maxlength="250" placeholder="Optional"></div>
+                    </div>
+                    <button class="primary-btn" type="submit">Save Child Profile</button>
+                </form>
+                <div id="childProfiles" class="child-list"></div>
+            </div>
+
+            <div class="child-panel">
+                <h2>2. Vaccination tracker</h2>
+                <p class="child-note">Select a child to view a starter checklist. This is not a complete or personalized
+                    vaccine schedule: confirm dose names and due dates with your child's vaccination card or
+                    ANM/ASHA/health centre.</p>
+                <div class="form-group"><label for="vaccineChild">Choose child</label><select id="vaccineChild"
+                        onchange="renderVaccines()">
+                        <option value="">Add a child first</option>
+                    </select></div>
+                <div id="vaccineTracker"></div>
+                <div class="child-actions">
+                    <button class="secondary-btn" onclick="showPage('locator')">📍 Find nearby clinics</button>
+                    <button class="secondary-btn" onclick="remindVaccines()">🔔 Set demo reminder</button>
+                    <button class="secondary-btn" onclick="uploadVaccineCard()">📷 Upload vaccination card photo</button>
+                </div>
+                <p class="child-note">SMS/WhatsApp reminders are not sent by this front-end demo. They require a secure
+                    backend and a messaging provider.</p>
+            </div>
+
+            <div class="child-panel">
+                <h2>3. Growth and nutrition check</h2>
+                <p class="child-note">Growth interpretation in children requires age- and sex-specific standards and
+                    accurate measurements. This prototype saves measurements and prompts appropriate follow-up; it does
+                    not diagnose malnutrition.</p>
+                <div class="child-grid">
+                    <div class="form-group"><label for="growthChild">Choose child</label><select id="growthChild"
+                            onchange="fillGrowth()">
+                            <option value="">Add a child first</option>
+                        </select></div>
+                    <div class="form-group"><label for="growthWeight">Weight (kg)</label><input id="growthWeight"
+                            type="number" min="0" step="0.1"></div>
+                    <div class="form-group"><label for="growthHeight">Height/length (cm)</label><input id="growthHeight"
+                            type="number" min="0" step="0.1"></div>
+                </div>
+                <button class="primary-btn" onclick="checkGrowth()">Review measurements</button>
+                <div id="growthResult" aria-live="polite"></div>
+                <div class="child-actions"><button class="secondary-btn" onclick="showPage('locator')">Find health
+                        centre / Anganwadi</button></div>
+            </div>
+
+            <div class="child-panel">
+                <h2>4. Child symptom guide</h2>
+                <p class="child-note">This guide is not a diagnosis. If the child seems seriously unwell, do not wait
+                    for this checker.</p>
+                <div class="child-grid">
+                    <div class="form-group"><label for="symptomAge">Child's age (months)</label><input id="symptomAge"
+                            type="number" min="0" max="204" placeholder="Age in months"></div>
+                    <div class="form-group"><label for="childSymptom">Main symptom</label><select id="childSymptom">
+                            <option value="">Choose symptom</option>
+                            <option>Fever</option>
+                            <option>Diarrhoea</option>
+                            <option>Cough or breathing problem</option>
+                            <option>Rash</option>
+                            <option>Vomiting</option>
+                            <option>Other</option>
+                        </select></div>
+                    <div class="form-group"><label for="dangerSign">Any warning sign?</label><select id="dangerSign">
+                            <option value="no">No warning signs noticed</option>
+                            <option value="breathing">Difficulty breathing / blue lips</option>
+                            <option value="awake">Hard to wake, unconscious, or seizure</option>
+                            <option value="drink">Unable to drink/breastfeed or repeated vomiting</option>
+                            <option value="dehydration">Very little urine, very dry mouth, or extreme weakness</option>
+                            <option value="rash">Purple/non-blanching rash or rapidly worsening condition</option>
+                        </select></div>
+                </div>
+                <button class="primary-btn" onclick="checkChildSymptoms()">Get guidance</button>
+                <div id="symptomResult" aria-live="polite"></div>
+            </div>
+
+            <div class="child-panel">
+                <h2>5. Child-specific emergency</h2>
+                <p>Capture the child's age and symptoms, then continue to the existing ambulance page.</p>
+                <div class="child-grid">
+                    <div class="form-group"><label for="emergencyChildAge">Age (months)</label><input
+                            id="emergencyChildAge" type="number" min="0" max="204"></div>
+                    <div class="form-group"><label for="emergencyChildSymptoms">Symptoms / details</label><input
+                            id="emergencyChildSymptoms" maxlength="500" placeholder="Describe what is happening"></div>
+                </div>
+                <button class="emergency-btn" onclick="startChildEmergency()">🚑 Continue to Emergency Help</button>
+                <p class="child-note">For an immediate emergency in India, call 112 or your local emergency service now.
+                    This demo does not dispatch an ambulance automatically.</p>
+            </div>
+
+            <div class="child-panel">
+                <h2>6. Child and maternal scheme finder</h2>
+                <p class="child-note">These are starting points to discuss with an ASHA/ANM, Anganwadi worker or
+                    government health centre. Availability and eligibility depend on current official rules and
+                    location.</p>
+                <div class="child-list">
+                    <div class="child-record">
+                        <h3>Janani Shishu Suraksha Karyakram (JSSK)</h3>
+                        <p>Ask a public health facility about eligible free services for pregnant women and sick
+                            newborns/infants under the programme.</p><button onclick="showPage('schemes')">Open scheme
+                            checker →</button>
+                    </div>
+                    <div class="child-record">
+                        <h3>Rashtriya Bal Swasthya Karyakram (RBSK)</h3>
+                        <p>Ask about child health screening and referral services for eligible children.</p><button
+                            onclick="showPage('locator')">Find health centre →</button>
+                    </div>
+                    <div class="child-record">
+                        <h3>Anganwadi / ICDS services</h3>
+                        <p>Ask your local Anganwadi about nutrition support, growth monitoring and services available in
+                            your area.</p><button onclick="showPage('locator')">Find nearby care →</button>
+                    </div>
+                    <div class="child-record">
+                        <h3>Ayushman Bharat / PM-JAY</h3>
+                        <p>Check current state-specific eligibility and covered services through official channels; this
+                            card does not confirm eligibility.</p><button onclick="showPage('schemes')">Open scheme
+                            checker →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="ambulance">
+
+        <nav>
+            <div class="nav-container">
+                <div class="brand" onclick="showPage('home')">
+                    <div class="brand-logo">🏥</div>
+                    <div>
+                        <h2>Gramrahi</h2>
+                        <span>Emergency Assistance</span>
+                    </div>
+                </div>
+                <button class="secondary-btn" onclick="goBack()">← Back</button>
+            </div>
+        </nav>
+
+        <div class="page-header">
+            <h1>🚑 Emergency Ambulance</h1>
+            <p>Request emergency medical assistance quickly.</p>
+        </div>
+
+        <div class="content-area">
+
+            <div class="ambulance-box">
+
+                <div class="ambulance-icon">🚑</div>
+
+                <h2>Need Emergency Assistance?</h2>
+
+                <p>Share your location to help emergency services locate you faster.</p>
+
+                <div class="location-box" id="locationStatus">📍 Current location not yet shared</div>
+
+                <div class="location-box" id="childEmergencySummary" style="display:none;text-align:left;"></div>
+
+                <div class="handoff-panel">
+                    <h3>🏥 Emergency Health Handoff</h3>
+                    <p style="margin-bottom:14px;color:var(--muted);line-height:1.6">When you request an ambulance, your
+                        saved health details are sent automatically to the hospital you are taken to, so doctors are
+                        ready when you arrive.</p>
+
+                    <div class="form-group">
+                        <label for="handoffPatient">Who needs help?</label>
+                        <select id="handoffPatient" onchange="renderHandoffPreview()"></select>
+                    </div>
+
+                    <p class="child-note" id="handoffHospitalAuto"
+                        style="margin:0 0 12px;font-weight:700;color:var(--primary-dark)"></p>
+
+                    <div id="handoffPreview"></div>
+
+                    <div class="consent-box">
+                        <label>
+                            <input type="checkbox" id="handoffShare">
+                            <span>Send these health details to the hospital when I request the ambulance.</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="handoff-progress" id="handoffProgress" aria-live="polite"></div>
+                <div class="hospital-receipt" id="handoffReceipt"></div>
+
+                <button class="secondary-btn" style="margin-bottom:15px;" onclick="getLocation()">📍 Share Current
+                    Location</button>
+
+                <button class="request-ambulance" onclick="requestAmbulance()">🚨 Request Emergency Ambulance</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="page" id="locator">
+
+        <nav>
+            <div class="nav-container">
+                <div class="brand" onclick="showPage('home')">
+                    <div class="brand-logo">🏥</div>
+                    <div>
+                        <h2>Gramrahi</h2>
+                        <span>Find Healthcare Nearby</span>
+                    </div>
+                </div>
+                <button class="secondary-btn" onclick="goBack()">← Back</button>
+            </div>
+        </nav>
+
+        <div class="page-header">
+            <h1>📍 Nearby Healthcare Facilities</h1>
+            <p>Find hospitals, clinics and healthcare centers near you.</p>
+        </div>
+
+        <div class="content-area">
+
+            <div class="locator-layout">
+
+                <div class="map">
+                    <div class="map-title">📍 Healthcare Map</div>
+                    <div class="map-marker marker-one">🏥</div>
+                    <div class="map-marker marker-two">🏥</div>
+                    <div class="map-marker marker-three">🏥</div>
+                </div>
+
+                <div class="clinic-list">
+
+                    <div class="clinic-card">
+                        <h3>🏥 Community Health Centre</h3>
+                        <p>General healthcare and emergency support.</p>
+                        <p class="distance">📍 1.2 km away</p>
+                    </div>
+
+                    <div class="clinic-card">
+                        <h3>🏥 Primary Health Centre</h3>
+                        <p>Primary healthcare and consultation.</p>
+                        <p class="distance">📍 2.8 km away</p>
+                    </div>
+
+                    <div class="clinic-card">
+                        <h3>🏥 District Government Hospital</h3>
+                        <p>Emergency and specialist healthcare.</p>
+                        <p class="distance">📍 5.4 km away</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="page" id="hospital">
+
+        <nav>
+            <div class="nav-container">
+                <div class="brand" onclick="showPage('home')">
+                    <div class="brand-logo">🏥</div>
+                    <div>
+                        <h2>Gramrahi</h2>
+                        <span>Hospital Check-in</span>
+                    </div>
+                </div>
+                <button class="secondary-btn" onclick="goBack()">← Back</button>
+            </div>
+        </nav>
+
+        <div class="page-header">
+            <h1>🏥 Hospital Patient Check-in</h1>
+            <p>Enter the patient's Gramrahi ID to view their health details instantly.</p>
+        </div>
+
+        <div class="content-area">
+            <div class="hospital-lookup">
+                <div class="form-group">
+                    <label for="lookupHospital">Hospital</label>
+                    <select id="lookupHospital">
+                        <option>Community Health Centre</option>
+                        <option>Primary Health Centre</option>
+                        <option>District Government Hospital</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="lookupId">Patient ID</label>
+                    <input id="lookupId" type="text" maxlength="13" placeholder="GRM-XXXX-XXXX"
+                        style="text-transform:uppercase" onkeypress="if(event.key==='Enter')lookupPatient()">
+                </div>
+                <button class="primary-btn" onclick="lookupPatient()">Fetch patient details →</button>
+
+                <div id="lookupResult" aria-live="polite" style="margin-top:24px"></div>
+
+                <div class="access-log">
+                    <h3>Recent record access on this device</h3>
+                    <div id="accessLog"></div>
+                </div>
+
+                <p class="child-note">Demo: patient records are looked up from this browser's storage. A live version
+                    needs hospital staff sign-in and a secure server, and every access should be logged for the patient
+                    to see.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="contacts">
+
+        <nav>
+            <div class="nav-container">
+                <div class="brand" onclick="showPage('home')">
+                    <div class="brand-logo">🏥</div>
+                    <div>
+                        <h2>Gramrahi</h2>
+                        <span>Healthcare Contact Directory</span>
+                    </div>
+                </div>
+                <button class="secondary-btn" onclick="goBack()">← Back</button>
+            </div>
+        </nav>
+
+        <div class="page-header">
+            <h1>Important Healthcare Contacts</h1>
+            <p>Quick access to emergency and healthcare support.</p>
+        </div>
+
+        <div class="content-area">
+
+            <div class="contact-grid">
+
+                <div class="contact-card">
+                    <div class="contact-icon">🚨</div>
+                    <h3>Emergency Response</h3>
+                    <div class="contact-number">112</div>
+                    <p>National emergency assistance.</p>
+                    <button class="primary-btn" onclick="callNumber('112')">Call Now</button>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">🚑</div>
+                    <h3>Ambulance Service</h3>
+                    <div class="contact-number">108</div>
+                    <p>Emergency ambulance support.</p>
+                    <button class="primary-btn" onclick="callNumber('108')">Call Now</button>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">🏥</div>
+                    <h3>Healthcare Helpline</h3>
+                    <div class="contact-number">104</div>
+                    <p>Healthcare information and support.</p>
+                    <button class="primary-btn" onclick="callNumber('104')">Call Now</button>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">🤖</div>
+                    <h3>AI Healthcare Guide</h3>
+                    <div class="contact-number">AI Guide</div>
+                    <p>Get help navigating Gramrahi.</p>
+                    <button class="primary-btn" onclick="showPage('guide')">Open AI Guide</button>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h3>Nearby Clinic</h3>
+                    <div class="contact-number">Find Care</div>
+                    <p>Locate healthcare facilities near you.</p>
+                    <button class="primary-btn" onclick="showPage('locator')">Find Clinic</button>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">👤</div>
+                    <h3>Patient Profile</h3>
+                    <div class="contact-number">Profile</div>
+                    <p>View and manage your healthcare profile.</p>
+                    <button class="primary-btn" onclick="showPage('profile')">Open Profile</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+
+</html>
